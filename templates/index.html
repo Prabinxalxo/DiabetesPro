@@ -147,6 +147,30 @@
     margin-bottom: 15px;
     display: inline-block;
 }
+
+@media (max-width: 767px) {
+    .hero {
+        padding: 80px 0 100px 0;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero1_subtitle {
+        font-size: 1.2rem;
+    }
+    .btn-custom {
+        padding: 10px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .feature-card {
+        margin-bottom: 20px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -436,6 +460,19 @@
 <script src="https://files.bpcontent.cloud/2025/04/22/08/20250422085548-OC34S5DQ.js"></script>
 
 <!-- Floating Chat Button -->
+
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+</script>
+
 
 </body>
 </html>

@@ -114,15 +114,15 @@ def send_reset_email(email, token):
     msg = Message("Password Reset Request", recipients=[email])
     msg.body = f'''Hi there,
 
-We received a request to reset your password. Click the link below to reset it:
+   We received a request to reset your password. Click the link below to reset it:
 
-{reset_url}
+  {reset_url}
 
-If you didn’t request this, just ignore this email.
+  If you didn’t request this, just ignore this email.
 
-Thanks,
-Your App Team
-'''
+T  hanks,
+   Your App Team
+    '''
 
     msg.html = render_template("reset_email.html", reset_url=reset_url)
     mail.send(msg)
@@ -260,9 +260,7 @@ def predict():
             'never': 0,
             'former': 1,
             'current': 2,
-            'not current': 3,
-            'ever': 4,
-            'no info': 5
+            'not known': 3,
         }
         smoking_val = smoking_map.get(smoking_history.lower(), -1)
         if smoking_val == -1:
